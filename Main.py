@@ -67,8 +67,8 @@ clr_pick.set_array([])
 fig, ax = plt.subplots(1, 1, figsize=(6, 6))
 plt.subplots_adjust(left=0.1, right=0.99, top=.85, bottom=0.1)
 fig.colorbar(clr_pick, orientation='vertical', format=mtick.PercentFormatter(xmax=1, decimals=0),
-             label=' \n % of Vote Democratic')
-fig.suptitle(' \n Average Covid Vaccination Rates by County Political Demographic')
+             label=' \n % Vote Democratic (County Level)')
+fig.suptitle(' \n Average COVID Vaccination Rates by Political Demographic')
 fig.set_size_inches(14, 10)
 
 
@@ -99,4 +99,4 @@ def animate(j):
 anim = FuncAnimation(fig, animate, frames=range(2, len(master_df) + 10), interval=1, blit=False)
 fig.show()
 
-anim.save('T3.gif', writer='imagemagick')
+anim.save('CovidGif.gif', writer='imagemagick')
